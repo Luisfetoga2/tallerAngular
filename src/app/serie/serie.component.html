@@ -1,0 +1,31 @@
+<!-- Tabla Listado de series -->
+
+<div class="container">
+    <div class="row">
+      <div class="col-6">
+        <table class="table">
+          <thead>
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">Name</th>
+              <th scope="col">Channel</th>
+              <th scope="col">Seasons</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let serie of series; let i = index">
+              <th class="table-secondary">{{serie.id}}</th>
+              <td class="table-secondary"><a href="{{serie.url}}">{{serie.title}}</a></td>
+              <td class="table-secondary">{{serie.channel}}</td>
+              <td class="table-secondary">{{serie.seasons}}</td>
+            </tr>
+  
+          </tbody>
+  
+        </table>
+        <tr>
+          <td> Seasons average: {{avgSeasons}} </td>
+        </tr>
+      </div>
+    </div>
+  </div>
